@@ -1,13 +1,13 @@
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
-import advancedFormat from "dayjs/plugin/advancedFormat";
-import relativeTime from "dayjs/plugin/relativeTime";
+const utc = require("dayjs/plugin/utc");
+const timezone = require("dayjs/plugin/timezone");
+const advancedFormat = require("dayjs/plugin/advancedFormat");
+const relativeTime = require("dayjs/plugin/relativeTime");
 
-import dayjs from "dayjs";
+const dayjs = require("dayjs");
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
 dayjs.extend(advancedFormat);
 dayjs.extend(relativeTime);
 
-export default dayjs.tz;
+module.exports = dayjs.tz;

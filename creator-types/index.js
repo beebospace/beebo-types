@@ -1,8 +1,8 @@
-const APIError = require("./lib/APIError");
+// const APIError = require("./lib/APIError");
 const time = require("./utils/time");
 
 export {
-    APIError,
+    // APIError,
 
     time,
 };
