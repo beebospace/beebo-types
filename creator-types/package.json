@@ -1,8 +1,9 @@
 {
-  "name": "@beebo/creator-types",
+  "name": "@beebospace/creator-types",
   "version": "0.0.1",
   "description": "BeeboSpace - Creator Types",
   "main": "build/index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,9 @@
     "@zyneex/id": "^0.0.2",
     "dayjs": "^1.11.0",
     "moment-timezone": "^0.5.34"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": []
 }
