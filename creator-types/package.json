@@ -2,7 +2,8 @@
   "name": "@beebospace/creator-types",
   "version": "0.0.1",
   "description": "BeeboSpace - Creator Types",
-  "main": "build/index.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

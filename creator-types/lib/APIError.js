@@ -4,17 +4,10 @@ import fs from "fs";
 
 import time from "../utils/time";
 
-export default class APIError {
-    id: string
-    message: string
-    code: number
-    status: number
+class APIError {
+    tags = new Map();
 
-    getCaptured: boolean
-
-    tags = new Map<string, any>();
-
-    constructor (message: string = "", code: number = 0, status: number = 500, capture: boolean = false) {
+    constructor (message = "", code = 0, status = 500, capture = false) {
         this.id = id(32);
 
         this.message = message;
@@ -24,15 +17,15 @@ export default class APIError {
         this.getCaptured = capture;
     }
 
-    setTag (key: string, value: any) {
+    setTag (key, value) {
         this.tags.set(key, value);
     }
 
-    removeTag (key: string) {
+    removeTag (key) {
         this.tags.delete(key);
     }
 
-    capture (): string {
+    capture () {
         const today = time();
         const _path = path.join(process.cwd(), "errors", this.id + ".json");
 
@@ -46,7 +39,9 @@ export default class APIError {
             code: this.code,
             data,
         }, null, 2));
-        
+
         return this.id;
     }
 }
+
+module.exports = APIError;
