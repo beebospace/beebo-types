@@ -1,0 +1,19 @@
+{
+  "name": "@beebo/creator-types",
+  "version": "0.0.1",
+  "description": "BeeboSpace - Creator Types",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel da Mota <mixeus@zyneex.dev>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  },
+  "dependencies": {
+    "@zyneex/id": "^0.0.2",
+    "dayjs": "^1.11.0",
+    "moment-timezone": "^0.5.34"
+  }
+}
